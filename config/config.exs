@@ -10,6 +10,10 @@ use Mix.Config
 config :dailymeal,
   ecto_repos: [Dailymeal.Repo]
 
+config :dailymeal, Dailymeal.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures the endpoint
 config :dailymeal, DailymealWeb.Endpoint,
   url: [host: "localhost"],
