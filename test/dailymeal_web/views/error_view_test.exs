@@ -12,4 +12,10 @@ defmodule DailymealWeb.ErrorViewTest do
     assert render(DailymealWeb.ErrorView, "500.json", []) ==
              %{errors: %{detail: "Internal Server Error"}}
   end
+
+  # test "renders error.json" do
+  #   assert render(DailymealWeb.ErrorView, "error.json", %{result: "Error message"}) == %{
+  #            error: "Error message"
+  #          }
+  # end
 end
