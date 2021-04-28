@@ -14,9 +14,9 @@ defmodule DailymealWeb.MealsViewTest do
 
     assert %{
              meal: %Meal{
-               descricao: "Description",
+               descricao: "Meal description",
                data: _,
-               calorias: 1500
+               calorias: 2000
              }
            } = response
   end

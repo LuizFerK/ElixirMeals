@@ -13,9 +13,9 @@ defmodule Dailymeal.Factory do
 
   def meal_factory do
     %Meal{
-      descricao: "Description",
+      descricao: "Meal description",
       data: NaiveDateTime.local_now(),
-      calorias: 1500
+      calorias: 2000
     }
   end
 end
