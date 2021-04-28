@@ -12,12 +12,10 @@ defmodule DailymealWeb.MealsViewTest do
 
     response = render(MealsView, "meal.json", meal: meal)
 
-    assert %{
-             meal: %Meal{
-               descricao: "Meal description",
-               data: _,
-               calorias: 2000
-             }
+    assert %Meal{
+             descricao: "Meal description",
+             data: _,
+             calorias: 2000
            } = response
   end
 end

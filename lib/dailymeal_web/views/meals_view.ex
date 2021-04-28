@@ -3,5 +3,5 @@ defmodule DailymealWeb.MealsView do
 
   alias Dailymeal.Meal
 
-  def render("meal.json", %{meal: %Meal{} = meal}), do: %{meal: meal}
+  def render("meal.json", %{meal: %Meal{} = meal}), do: meal
 end
