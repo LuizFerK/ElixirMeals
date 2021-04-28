@@ -12,5 +12,12 @@ defmodule Dailymeal.Meals.Update do
     meal
     |> Meal.changeset(params)
     |> Repo.update()
+    |> handle_update()
+  end
+
+  defp handle_update({:ok, %Meal{}} = result), do: result
+
+  defp handle_update({:error, result}) do
+    {:error, Error.build(:bad_request, result)}
   end
 end

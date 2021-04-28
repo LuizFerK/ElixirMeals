@@ -14,7 +14,7 @@ defmodule Dailymeal.Meals.GetTest do
       {:ok, id: id}
     end
 
-    test "when a valid id is given, returns the user", %{id: id} do
+    test "when a valid id is given, returns the meal", %{id: id} do
       response = Get.by_id(id)
 
       assert {:ok, %Meal{}} = response

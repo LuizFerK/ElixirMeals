@@ -14,7 +14,7 @@ defmodule Dailymeal.Meals.DeleteTest do
       {:ok, id: id}
     end
 
-    test "when a valid id is given, delete the user", %{id: id} do
+    test "when a valid id is given, delete the meal", %{id: id} do
       response = Delete.call(id)
 
       assert {:ok, %Meal{}} = response

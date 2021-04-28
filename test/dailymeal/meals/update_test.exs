@@ -14,7 +14,7 @@ defmodule Dailymeal.Meals.UpdateTest do
       {:ok, id: id}
     end
 
-    test "when all params are valid, updates the user", %{id: id} do
+    test "when all params are valid, updates the meal", %{id: id} do
       params = build(:meal_params, %{"id" => id, "descricao" => "Updated description"})
 
       response = Update.call(params)
@@ -43,7 +43,7 @@ defmodule Dailymeal.Meals.UpdateTest do
 
       response = Update.call(params)
 
-      assert {:error, _} = response
+      assert {:error, %Error{}} = response
     end
   end
 end
